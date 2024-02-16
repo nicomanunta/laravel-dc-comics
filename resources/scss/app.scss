@@ -1,1 +1,232 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+// HEADER
+header {
+    margin: 20px 0px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+
+
+
+    li a {
+        padding: 10px;
+        padding-bottom: 50px;
+        text-decoration: none;
+        color: black;
+
+
+
+        &.active:hover {
+            color: rgba(2, 130, 249, 255);
+            border-bottom: 4px solid rgba(2, 130, 249, 255);
+        }
+    }
+
+}
+
+.inset {
+    top: -45px !important;
+}
+
+.current-route {
+    color: rgba(2, 130, 249, 255);
+    border-bottom: 4px solid rgba(2, 130, 249, 255);
+}
+
+// FOOTER
+.top-footer {
+    background-image: url(../img/footer-bg.jpg);
+    position: relative;
+    height: 480px;
+    z-index: -1;
+
+}
+
+.titolo-footer {
+    text-transform: uppercase;
+    color: white;
+    padding-top: 20px;
+}
+
+.titolo-footer:hover {
+    color: white;
+}
+
+.list-top-footer {
+    padding: 0px;
+
+    li {
+        color: rgb(156, 154, 154);
+        list-style: none;
+        padding: 5px 0px;
+    }
+
+    li:hover {
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.img-dc {
+    position: relative;
+    bottom: 50px;
+    z-index: -1;
+}
+
+.bottom-footer {
+    background-color: rgba(48, 48, 48, 255);
+
+    top: 97px;
+    width: 100%;
+}
+
+.color-button {
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    border: 2px solid rgba(2, 130, 249, 255);
+    padding: 5px 10px;
+    margin: 30px 0px;
+
+    &:hover {
+        background-color: rgba(2, 130, 249, 255);
+    }
+
+}
+
+.list-bottom-footer {
+
+    display: flex;
+    list-style: none;
+    vertical-align: middle;
+    margin: 0;
+
+    li {
+        padding: 0px 10px;
+
+
+    }
+
+}
+
+.follow {
+    color: rgba(2, 130, 249, 255);
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+
+
+// MAIN COMICS
+.jumbotron {
+    position: relative;
+    height: 300px;
+    z-index: -1;
+}
+
+.img-jumbotron {
+    width: 100%;
+}
+
+.current {
+    text-transform: uppercase;
+    background-color: rgba(2, 130, 249, 255);
+    color: white;
+    padding: 10px 12px;
+    font-weight: 700;
+    position: relative;
+    top: 10px;
+    left: 70px;
+}
+
+// card fumetti
+.fumetti {
+    background-color: black;
+    width: 100%;
+}
+
+.img-fumetti {
+    width: 100%;
+    height: 200px;
+}
+
+.titolo-fumetto {
+    color: white;
+}
+
+.distanza {
+    margin-top: 10px
+}
+
+.color-button {
+    text-transform: uppercase;
+    color: white;
+    background-color: rgba(2, 130, 249, 255);
+    border: 1px solid rgba(2, 130, 249, 255);
+    padding: 5px 40px;
+    margin-bottom: 30px;
+
+    &:hover {
+        cursor: pointer;
+        color: rgba(2, 130, 249, 255);
+        background-color: white;
+
+    }
+}
+
+// fascia azzurra
+.buy {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+
+    li span {
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+    }
+
+}
+
+.immagini {
+    width: 50px;
+}
+
+.dc-info {
+    background-color: rgba(2, 130, 249, 255);
+    padding: 50px 0px;
+
+}
+
+
+//single-comic
+.border-radius {
+    border-radius: 20px;
+}
+
+.single-comic {
+    width: 60%;
+}
+
+.button-price {
+    background-color: rgba(2, 130, 249, 255);
+    color: white;
+
+    &:hover {
+        color: rgba(2, 130, 249, 255);
+        ;
+        background-color: white;
+    }
+}
+
+.misure {
+    font-size: 10px;
+}
