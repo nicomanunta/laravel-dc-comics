@@ -11,7 +11,7 @@
                 @foreach ($comics as $comic)  
                     <div class="col-2 d-flex mt-4" >
                         <div style="width: 18rem;">
-                            <a href=" ">
+                            <a href="{{ route('comics.show', ['comic' => $comic->id])}}">
                                 <img class="img-fumetti" src="{{ $comic['thumb'] }}" alt="">
                                 <div class="distanza">
                                     <h6 class="titolo-fumetto">{{ $comic['title']}}</h6>
