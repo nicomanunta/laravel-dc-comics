@@ -21,4 +21,16 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h6>Writers</h6>
+                @
+            </div>
+            <div class="col-6">
+                <h6>Artists</h6>
+                span
+            </div>
+        </div>
+    </div>
 @endsection
