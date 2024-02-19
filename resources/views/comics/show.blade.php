@@ -18,6 +18,9 @@
                     <span class="badge text-bg-light">{{$comic["series"]}}</span>
                     <span class="badge text-bg-light">{{$comic["type"]}}</span>
                 </div>
+                <div class="text-end pt-4">
+                    <a href="{{ route('comics.edit', ['comic'=> $comic->id])}}"><button type="button" class="btn btn-warning">Modifica</button></a>
+                </div>
             </div>
         </div>
     </div>
