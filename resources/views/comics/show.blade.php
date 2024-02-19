@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    {{-- <div class="container">
         <div class="row">
             <div class="col-6">
                 <h6>Writers</h6>
@@ -32,5 +32,5 @@
                 span
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection

@@ -24,6 +24,7 @@
         </div>
         <div class="text-center ">
             <button class="color-button">load more</button>
+            <a href="{{ route('comics.create')}}"><button class="color-button">Add comic</button></a>
         </div>
     </div>
 
