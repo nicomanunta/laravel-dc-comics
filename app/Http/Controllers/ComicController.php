@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Support\Facades\Validator;
 
 
 class ComicController extends Controller
@@ -92,18 +93,9 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $form_data = $request-> all();
+        $form_data = $this->validation($request-> all());
 
         $new_comic = Comic::find($id);
-        $new_comic-> title = $form_data['title'];
-        $new_comic-> description = $form_data['description'];
-        $new_comic-> thumb = $form_data['thumb'];
-        $new_comic-> price = $form_data['price'];
-        $new_comic-> series = $form_data['series'];
-        $new_comic-> sale_date = $form_data['sale_date'];
-        $new_comic-> type = $form_data['type'];
-        $new_comic-> artists= json_encode(explode(',', $form_data['artists']));
-        $new_comic-> writers = json_encode(explode(',', $form_data['writers']));
         
         $new_comic-> update();
 
@@ -147,8 +139,8 @@ class ComicController extends Controller
                 'title.min' => 'Il titolo deve essere lungo minimo 5 caratteri',
                 'dscription.required' => 'Descrizione obbligatoria',
                 'description.string' => 'La descrizione deve essere un testo valido',
-                'thumb.max' => "L\'URL dell\'immagine non può superare la lunghezza massima consentita",
-                'thumb.url' => "L\'URL dell\'immagine non è valido",
+                'thumb.max' => "L'URL dell'immagine non può superare la lunghezza massima consentita",
+                'thumb.url' => "L'URL dell'immagine non è valido",
                 'price.required' => 'Prezzo obbligatorio',
                 'price.numeric' => 'Il prezzo deve essere un numero',
                 'series.required' => 'Serie obbligatoria',
