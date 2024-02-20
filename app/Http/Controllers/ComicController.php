@@ -123,4 +123,42 @@ class ComicController extends Controller
 
         return redirect()->route('comics.index');
     }
+
+    // VALIDATION
+    private function validation($data){
+
+        $validator = Validator::make(
+            $data,
+            [
+                'title'=> 'required|max:40|min:5',
+                'description'=> 'required|string',
+                'thumb'=>'max:255|url',
+                'price'=>'required|numeric',
+                'series'=>'required',
+                'sale_date'=>'required|date',
+                'type'=>'required',
+                'artists'=>'required',
+                'writers'=>'required',
+                
+            ],
+            [
+                'title.required' => 'Titolo obbligatorio',
+                'title.max' => 'Il titolo deve essere lungo massimo 40 caratteri',
+                'title.min' => 'Il titolo deve essere lungo minimo 5 caratteri',
+                'dscription.required' => 'Descrizione obbligatoria',
+                'description.string' => 'La descrizione deve essere un testo valido',
+                'thumb.max' => "L\'URL dell\'immagine non può superare la lunghezza massima consentita",
+                'thumb.url' => "L\'URL dell\'immagine non è valido",
+                'price.required' => 'Prezzo obbligatorio',
+                'price.numeric' => 'Il prezzo deve essere un numero',
+                'series.required' => 'Serie obbligatoria',
+                'sale_date.required' => 'Data obbligatoria',
+                'sale_date.date' => 'La data deve essere una data valida',
+                'type.required' => 'Tipo obbligatorio',
+                'artists.required' => 'Artisti obbligatori',
+                'writers.required' => 'Scrittori obbligatori',
+            ]
+        )->validate();
+        return $validator;
+    }
 }

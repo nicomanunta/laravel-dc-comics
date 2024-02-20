@@ -12,11 +12,11 @@
                         @csrf
                         <div class="py-3">
                             <label for="title" class="form-label">Titolo</label>
-                            <input type="text" name="title" id="title" class="form-control" placeholder="Titolo" required>
+                            <input type="text" name="title" id="title" class="form-control" placeholder="Titolo">
                         </div>
                         <div class="py-3">  
                             <label for="description" class="form-label">Descrizione</label>
-                            <textarea class="form-control" name="description" id="description" rows="3" placeholder="Descrizione" required></textarea>
+                            <textarea class="form-control" name="description" id="description" rows="3" placeholder="Descrizione"></textarea>
                         </div>
                         <div class="py-3">
                             <label for="thumb" class="form-label">Link immagine copertina</label>
@@ -24,11 +24,11 @@
                         </div>
                         <div class="py-3">
                             <label for="price" class="form-label">Prezzo</label>
-                            <input type="text" name="price" id="price" class="form-control" placeholder="Prezzo ($00.00)" required>
+                            <input type="text" name="price" id="price" class="form-control" placeholder="Prezzo ($00.00)">
                         </div>
                         <div class="py-3">
                             <label for="series" class="form-label">Serie</label>
-                            <input type="text" name="series" id="series" class="form-control" placeholder="Serie" required>
+                            <input type="text" name="series" id="series" class="form-control" placeholder="Serie">
                         </div>
                         <div class="py-3">
                             <label for="sale_date" class="form-label">Data di uscita</label>
@@ -36,7 +36,7 @@
                         </div>
                         <div class="py-3">
                             <label for="type" class="form-label">Tipo</label>
-                            <select name="type" id="type" class="form-control" required>
+                            <select name="type" id="type" class="form-control">
                                 <option value="">Seleziona il tipo</option>
                                 <option value="comic book">Comic Book</option>
                                 <option value="graphic novel">Graphic Novel</option>
