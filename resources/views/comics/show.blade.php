@@ -20,6 +20,11 @@
                 </div>
                 <div class="text-end pt-4">
                     <a href="{{ route('comics.edit', ['comic'=> $comic->id])}}"><button type="button" class="btn btn-warning">Modifica</button></a>
+                    <form class="pt-3" action="{{ route('comics.destroy', ['comic'=> $comic->id])}}" method="POST">
+                        @csrf 
+                        @method('DELETE')
+                        <button type="button" class="btn btn-danger">Elimina</button>
+                    </form>
                 </div>
             </div>
         </div>
